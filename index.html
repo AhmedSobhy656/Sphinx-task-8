@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+ <html>
+       <head>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+         <link rel="stylesheet" href="css/fontawesome-free-5.15.4-web/css/all.css">
+         <link rel="stylesheet" href="css/bootstrap-grid.min.css"> 
+         <link rel="stylesheet" href="css/bootstrap.min.css"> 
+         <link rel="stylesheet" href="css/main.css">
+
+          <style>
+          .mySlides {display:none;}
+          </style>
+
+         <style>
+          .loader 
+          {
+           position: fixed;
+           left: 0px;
+           top: 0px;
+           width: 100%;
+           height: 100%;
+           z-index: 9999;
+           background: url('https://educationalrc.org/tasks/Preloader_2.gif') 50% 50% no-repeat rgb(255,255,255);
+          }
+          </style>
+
+       </head>
+
+       <body>
+          <div class="loader_bg">
+            <div class="loader"></div>
+          </div>
+
+          <section>
+              <div class="header">
+                <img src="image/audio_icon.png" class="img-fluid btn image-sound"  alt="Responsive image">
+                <h4> Listen and (<span> &#10003;</span>). Then say </h4>  
+
+                <audio id="audioPlayer1" preload="auto" src="assets/audio/p62_ex8_1.mp3"> </audio>
+
+              </div>
+
+              <div class="container-out scale" id="container-id"> <!-- style="transform:scale();left:0px;top:0px;"-->
+                
+                  <div class="row section-one-of-two" id="section-one">
+                      <div class="col-6 box-photo-one btn" id="choose-one-a">
+                        <div class="circle-small">  a </div>              
+                        <img src="image/1a.png" class="img-fluid" alt="Responsive image">  
+                        <trueAnswer class="true-answer" id="true-answer-one"> 
+                          <img src="image/true.png"/>
+                        </trueAnswer>              
+                      </div>
+                      <div class="col-6  box-photo-one btn" id="choose-one-b">
+                        <div class="circle-small">  b </div>              
+                        <img src="image/1b.png" class="img-fluid" alt="Responsive image">
+                        <wrongAnswer class="wrong-answer" id="wrong-answer-one">
+                          <h4> Wrong Answer </h4>
+                        </wrongAnswer>                
+                      </div>
+                  </div>
+
+                  <div class="row section-two-of-two" id="section-two">
+                      <div class="col-6  box-photo-two btn" id="choose-two-a">
+                        <div class="circle-small">  a </div>              
+                        <img src="image/2a.png" class="img-fluid" alt="Responsive image">
+                        <wrongAnswer class="wrong-answer" id="wrong-answer-two">
+                          <h4> Wrong Answer </h4>
+                        </wrongAnswer>                 
+                      </div>
+                      <div class="col-6  box-photo-two btn" id="choose-two-b">
+                        <div class="circle-small">  b </div>              
+                        <img src="image/2b.png" class="img-fluid" alt="Responsive image">
+                        <trueAnswer class="true-answer" id="true-answer-two"> 
+                          <img src="image/true.png"/>
+                        </trueAnswer>                 
+                      </div>
+                  </div>
+              </div>
+
+              <!-- footer start -->
+              <div class="footer">
+                        <button class="box-1 btn" >
+                          <img src="image/replay_icon.png" class="img-fluid" alt="Responsive image"> 
+                        </button>
+
+                        <div class="box-4">
+                          <div class="dragger">
+                            <img src="image/draggerBG.png" class="img-fluid" alt="Responsive image"/>
+                            <div class="play">
+                              <img src="image/play.png" class="play-image btn" id="play-section-one"/>   
+                              <input type="range" min="0" max="100" value="0" class="slider" id="myRange" step="0.1">                   
+                            </div>
+                          </div>
+                        </div>
+
+                        <button class="box-1 btn" >
+                          <img src="image/reload_icon.png" class="img-fluid" alt="Responsive image">
+                        </button>
+                                              
+                        <button class="box-1 btn" id="btn-shwo-answer">
+                          <img src="image/showAns_icon.png" class="img-responsive" alt="Responsive image">  
+                        </button> 
+
+                        <button class="box-1 btn btn-shwo-answer-two" id="btn-shwo-answer-two">
+                          <img src="image/showAns_icon.png" class="img-responsive" alt="Responsive image">  
+                        </button> 
+
+                          <button class="box-1 btn" id="btn-previous"> 
+                          <img src="image/back_icon.png" class="img-responsive" alt="Responsive image">
+                          </button>    
+
+                        <div class="box-number-section col-1">
+                          <p id="page-number"> 1 of 2</p>
+                        </div>
+
+                        <button class="box-1 btn" id="btn-next"> 
+                          <img src="image/next_icon.png" class="img-responsive inlineblock" alt="Responsive image">
+                        </button>   
+              </div>
+              <!-- footer End -->
+
+          </section>
+
+            <!-- preloader -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script>
+                setTimeout(function(){
+                    $('.loader_bg').fadeToggle();
+                }, 500);
+            </script>
+            <!-- preloader -->
+                   
+           <script src="script/script.js"> </script>
+           <script src="script/jquery.js"> </script>
+           <script src="script/bootstrap.min.js"> </script> 
+           <script src="css/fontawesome-free-5.15.4-web/js/all.js"> </script> 
+
+      </body>
+   </html>
